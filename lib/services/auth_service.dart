@@ -14,8 +14,8 @@ class AuthService {
       );
       print('✅ User registered: ${userCredential.user?.email}');
       return userCredential;
-    } on FirebaseAuthException catch (e) {
-      print('❌ Registration error: ${e.message}');
+    }  catch (e) {
+      print('❌ Registration error: $e');
       return null;
     }
   }
@@ -31,8 +31,8 @@ class AuthService {
       );
       print('✅ User logged in: ${userCredential.user?.email}');
       return userCredential;
-    } on FirebaseAuthException catch (e) {
-      print('❌ Login error: ${e.message}');
+    }  catch (e) {
+      print('❌ Login error: $e');
       return null;
     }
   }
